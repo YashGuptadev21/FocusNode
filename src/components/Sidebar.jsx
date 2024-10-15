@@ -86,7 +86,7 @@ const Sidebar = () => {
         </p>
         <span className="text-2xl font-bold text-black">Focus Node</span>
       </h1>
-      <div className="flex-1 flex flex-col gap-5 py-8">
+      <div className="flex-1 flex flex-col gap-y-5 py-8">
         {sidebarLinks.map((link) => {
           return <NavLink el={link} key={link.label} />;
         })}
