@@ -50,10 +50,10 @@ export const summary = {
       },
       {
         _id: "65c5d547660756f6fd453a7a",
-        title: "Duplicate - Duplicate - Review Code Changes",
+        title: "Review Code Changes",
         date: "2024-02-09T00:00:00.000Z",
         priority: "medium",
-        stage: "in progress",
+        stage: "inprogress",
         assets: [],
         team: [
           {
@@ -351,7 +351,7 @@ export const summary = {
         title: "Duplicate - Review Code Changes",
         date: "2024-02-07T17:55:13.218Z",
         priority: "medium",
-        stage: "in progress",
+        stage: "inprogress",
         assets: [],
         team: [
           {
@@ -438,7 +438,7 @@ export const summary = {
         title: "Review Code Changes",
         date: "2024-02-05T00:00:00.000Z",
         priority: "medium",
-        stage: "in progress",
+        stage: "inprogress",
         assets: [],
         team: [
           {
@@ -573,19 +573,15 @@ export const summary = {
   export const chartData = [
     {
       name: "High",
-      total: 2400,
+      total: 1850,
     },
     {
       name: "Medium",
-      total: 2210,
-    },
-    {
-      name: "Normal",
-      total: 3210,
+      total: 1210,
     },
     {
       name: "Low",
-      total: 2290,
+      total: 1000,
     },
   ];
   
@@ -639,7 +635,7 @@ export const summary = {
       title: "Duplicate - Duplicate - Review Code Changes",
       date: "2024-02-09T00:00:00.000Z",
       priority: "medium",
-      stage: "in progress",
+      stage: "inprogress",
       assets: [],
       team: [
         {
