@@ -93,11 +93,11 @@ const App = () => {
           <Route path="/" element={<Navigate to="dashboard" />} />
           <Route path="/dashboard" element={<DashBoard />} />
           <Route path="/tasks" element={<Tasks />} />
-          <Route path="/completed/status" element={<Tasks />} />
+          <Route path="/completed/:status" element={<Tasks />} />
           <Route path="/in-progress/:status" element={<Tasks />} />
           <Route path="/team" element={<Users />} />
           <Route path="/delete" element={<Trash />} />
-          <Route path="/task/:id" element={<TaskDetails />} />
+          <Route path="/todo/:id" element={<TaskDetails />} />
         </Route>
 
         <Route path="/login" element={<Login />} />
