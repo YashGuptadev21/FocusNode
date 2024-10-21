@@ -28,7 +28,7 @@ const TaskTable = ({ tasks }) => {
       <tr className="text-black text-left">
         <th className="py-2">Task Title</th>
         <th className="py-2">Priority</th>
-        <th className="py-2">Team</th>
+        <th className="py-2">Teams</th>
         <th className="py-2 hidden md:block">Created At</th>
       </tr>
     </thead>
@@ -48,7 +48,7 @@ const TaskTable = ({ tasks }) => {
           <span
             className={clsx(
               "text-lg",
-              PRIORITYSTYLES[task.priority]
+              PRIORITYSTYLES[task.priority] 
             )}
           >
             {ICONS[task.priority]}
@@ -148,7 +148,7 @@ const DashBoard = () => {
   };
   return (
     <div>
-      <div className="h-full py-4">
+      <div className="h-full py-4 pr-8 pl-6">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
           {stats.map(({ icon, bg, label, total }, index) => (
             <Card key={index} icon={icon} bg={bg} label={label} count={total} />

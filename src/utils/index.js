@@ -39,7 +39,7 @@ export function getInitials(fullName) {
 export const PRIORITYSTYLES = {
   high: "text-red-600",
   medium: "text-yellow-600",
-  normal: "text-green-600",
+  Low : "text-green-600",
 };
 
 export const TASK_TYPE = {

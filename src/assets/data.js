@@ -968,7 +968,7 @@ export const tasks = [
     _id: "65c3c21f55ae9b2f7666e86c",
     title: "Duplicate - Website Project Proposal",
     date: "2024-02-07T17:46:56.040Z",
-    priority: "normal",
+    priority: "Low",
     stage: "completed",
     assets: [],
     team: [

@@ -10,7 +10,7 @@ import Tabs from "../components/Tabs";
 import TaskTitle from "../components/TaskTitle";
 import BoardView from "../components/BoardView";
 import { tasks } from "../assets/data";
-import Table from "../components/Table";
+import Table from "../components/task/Table";
 
 const TABS = [
   { title: "Board View", icon: <MdGridView /> },
@@ -18,9 +18,9 @@ const TABS = [
 ];
 
 const TASK_TYPE = {
-  todo: "bg-blue-600",
+  todo: "bg-red-600",
   inprogress: "bg-yellow-600",
-  completed: "bg-green-600",
+  Completed: "bg-green-600",
 };
 
 const Tasks = () => {
@@ -36,7 +36,7 @@ const Tasks = () => {
       <Loading />
     </div>
   ) : (
-    <div className="w-full pr-8">
+    <div className="w-full pr-8 pl-6">
       <div className="flex items-center justify-between mb-2">
         <Title title={status ? `${status} Tasks` : "Tasks"} />
         {!status && (
@@ -52,16 +52,18 @@ const Tasks = () => {
         <Tabs tabs={TABS} setSelected={setSelected}>
           {!status && (
             <div className="w-full flex jusitfy-between gap-4 md:gap-x-12 py-4">
-              <TaskTitle label="To Do" className={TASK_TYPE.todo} />
-              <TaskTitle label="In Progress" className={TASK_TYPE.inprogress} />
-              <TaskTitle label="completed" className={TASK_TYPE.completed} />
+              <TaskTitle label="To-Do" className={TASK_TYPE.todo} />
+              <TaskTitle label="In-Progress" className={TASK_TYPE.inprogress} />
+              <TaskTitle label="Completed" className={TASK_TYPE.Completed} />
             </div>
           )}
 
           {selected === 0 ? <BoardView tasks={tasks} /> : <div></div>}
+         
         </Tabs>
+      {selected === 0 ? <Table tasks={tasks} /> : <div></div>}
       </div>
-      <Table tasks={tasks} />
+     
     </div>
   );
 };
