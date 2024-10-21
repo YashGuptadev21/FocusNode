@@ -1,5 +1,5 @@
 export const formatDate = (date) => {
-  const month = date.tolocalString("en-US", { month: "short" });
+  const month = date.toLocaleString("en-US", { month: "short" });
   const day = date.getDate();
   const year = date.getFullYear();
 
@@ -39,11 +39,11 @@ export function getInitials(fullName) {
 export const PRIORITYSTYLES = {
   high: "text-red-600",
   medium: "text-yellow-600",
-  low: "text-blue-600",
+  normal: "text-green-600",
 };
 
 export const TASK_TYPE = {
-  todo: "bg-blue-600",
+  todo: "bg-red-600",
   inprogress : "bg-yellow-500",
   completed: "bg-green-600",
 };
