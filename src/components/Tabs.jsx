@@ -1,5 +1,5 @@
 import React from "react";
-import { Tab } from "@headlessui/react";
+import { Tab, TabPanel } from "@headlessui/react";
 
 function classNames(...classes){
     return classes.filter(Boolean).join("")
@@ -30,7 +30,13 @@ const Tabs = ({ tabs, setSelected, children }) => {
             </Tab>
           ))}
         </Tab.List>
-        <Tab.Panel className="w-full mt-2">{children}</Tab.Panel>
+        <Tab.Panels className="w-full mt-2">
+          {React.Children.map(children, (child, index) => (
+            <Tab.Panel key={index} className="w-full">
+              {child}
+            </Tab.Panel>
+          ))}
+        </Tab.Panels>
       </Tab.Group>
     </div>
   );

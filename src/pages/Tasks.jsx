@@ -50,20 +50,21 @@ const Tasks = () => {
       </div>
       
         <Tabs tabs={TABS} setSelected={setSelected}>
+          <div>
           {!status && (
-            <div className="w-full flex jusitfy-between gap-4 md:gap-x-12 py-4">
+            <div className="w-full flex justify-between gap-4 md:gap-x-12 py-4">
               <TaskTitle label="To-Do" className={TASK_TYPE.todo} />
               <TaskTitle label="In-Progress" className={TASK_TYPE.inprogress} />
               <TaskTitle label="Completed" className={TASK_TYPE.Completed} />
             </div>
           )}
-          {selected !== 1 ? (
             <BoardView tasks={tasks} />
-          ): (
+            </div>
+         
             <div className="w-full">
               <Table tasks={tasks} />
             </div>
-          )}
+        
         </Tabs>
     </div>
   );
