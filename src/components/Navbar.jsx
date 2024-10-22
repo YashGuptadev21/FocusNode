@@ -10,7 +10,7 @@ const Navbar = () => {
   const dispatch = useDispatch();
 
   return (
-    <div className="flex justify-between items-center px-4 py-3 2xl:py-4 sticky z-10 top-0 pr-8 pl-6">
+    <div className="flex justify-between items-center px-4 py-3 2xl:py-4 z-10 top-0 pr-8 pl-6">
       <div className="flex gap-4">
         <button
           onClick={() => dispatch(setOpenSidebar(true))}

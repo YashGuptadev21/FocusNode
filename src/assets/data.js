@@ -388,7 +388,7 @@ export const summary = {
       title: "Duplicate - Website Project Proposal",
       date: "2024-02-07T17:46:56.040Z",
       priority: "normal",
-      stage: "todo",
+      stage: "completed",
       assets: [],
       team: [
         {

@@ -48,7 +48,7 @@ const Tasks = () => {
           />
         )}
       </div>
-      <div>
+      
         <Tabs tabs={TABS} setSelected={setSelected}>
           {!status && (
             <div className="w-full flex jusitfy-between gap-4 md:gap-x-12 py-4">
@@ -57,13 +57,14 @@ const Tasks = () => {
               <TaskTitle label="Completed" className={TASK_TYPE.Completed} />
             </div>
           )}
-
-          {selected === 0 ? <BoardView tasks={tasks} /> : <div></div>}
-         
+          {selected !== 1 ? (
+            <BoardView tasks={tasks} />
+          ): (
+            <div className="w-full">
+              <Table tasks={tasks} />
+            </div>
+          )}
         </Tabs>
-      {selected === 0 ? <Table tasks={tasks} /> : <div></div>}
-      </div>
-     
     </div>
   );
 };
