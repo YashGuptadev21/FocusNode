@@ -49,7 +49,7 @@ const Users = () => {
             user?.isActive ? "bg-blue-200" : "bg-yellow-100"
           )}
         >
-          {user?.isActive ? "Active" : "Disabled"}
+          {user?.isActive ? "" : "Disabled"}
         </button>
       </td>
       <td className="p-2 flex gap-4 justify-end">

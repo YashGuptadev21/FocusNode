@@ -96,7 +96,7 @@ const App = () => {
           <Route path="/completed/:status" element={<Tasks />} />
           <Route path="/in-progress/:status" element={<Tasks />} />
           <Route path="/team" element={<Users />} />
-          <Route path="/delete" element={<Trash />} />
+          <Route path="/trash" element={<Trash />} />
           <Route path="/todo/:id" element={<TaskDetails />} />
         </Route>
 

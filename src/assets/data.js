@@ -591,7 +591,7 @@ export const tasks = [
     title: "Test task",
     date: "2024-12-09T00:00:00.000Z",
     priority: "high",
-    stage: "todo",
+    stage: "inprogress",
     assets: [
       "https://firebasestorage.googleapis.com/v0/b/taskmanager-557d7.appspot.com/o/1707471138863original-a005132062ca5bafc505c4c74f0e1865.jpg?alt=media&token=55f909f2-7f05-42f3-af4f-dc7f87cdea1d",
       "https://firebasestorage.googleapis.com/v0/b/taskmanager-557d7.appspot.com/o/1707471144712PsZch9E1_400x400.jpg?alt=media&token=7ce62c7e-c240-4032-83c6-bb6c9cdc0d4b",
@@ -634,8 +634,8 @@ export const tasks = [
     _id: "65c5d547660756f6fd453a7a",
     title: "Duplicate - Duplicate - Review Code Changes",
     date: "2024-02-09T00:00:00.000Z",
-    priority: "medium",
-    stage: "inprogress",
+    priority: "high",
+    stage: "todo",
     assets: [],
     team: [
       {
@@ -654,23 +654,23 @@ export const tasks = [
     isTrashed: false,
     activities: [
       {
-        type: "started",
+        type: "completed",
         activity: "Project started",
-        date: "2024-02-09T09:16:56.623Z",
+        date: new Date(),
         by: "65c202d4aa62f32ffd1303cc",
         _id: "65c5f18bb5204a81bde866d1",
       },
       {
-        type: "commented",
+        type: "completed",
         activity: "i like coding!!",
-        date: "2024-02-09T09:16:56.623Z",
+        date: new Date(),
         by: "65c202d4aa62f32ffd1303cc",
         _id: "65c5f19eb5204a81bde866dd",
       },
       {
-        type: "bug",
+        type: "completed",
         activity: "bug found",
-        date: "2024-02-09T09:16:56.623Z",
+        date: new Date(),
         by: "65c202d4aa62f32ffd1303cc",
         _id: "65c5f1abb5204a81bde866eb",
       },
@@ -770,9 +770,9 @@ export const tasks = [
   {
     _id: "65c45fb6af6ec0118be94052",
     title: "Task Manager Youtube Video",
-    date: "2024-02-11T00:00:00.000Z",
-    priority: "medium",
-    stage: "inprogress",
+    date: "2024-10-22T00:00:00.000Z",
+    priority: "low",
+    stage: "completed",
     assets: [
       "https://firebasestorage.googleapis.com/v0/b/taskmanager-557d7.appspot.com/o/1707412043078report.jpg?alt=media&token=41d02b42-c25c-4fbb-90a9-340a45f4bbe1",
       "https://firebasestorage.googleapis.com/v0/b/taskmanager-557d7.appspot.com/o/1707412052287hand-holding-writing-checklist-application-form-document-clipboard-white-background-3d-illustration.jpg?alt=media&token=98b360b4-954c-47e3-8283-8228a54a327c",
@@ -794,14 +794,14 @@ export const tasks = [
     isTrashed: false,
     activities: [
       {
-        type: "started",
+        type: "completed",
         activity: "Project completed!!",
         date: "2024-02-08T18:13:14.717Z",
         by: { _id: "65c202d4aa62f32ffd1303cc", name: "Codewave" },
         _id: "65c51b998064dfd208b3f9",
       },
       {
-        type: "commented",
+        type: "completed",
         activity: "Project completed!!",
         date: "2024-02-08T18:13:14.717Z",
         by: { _id: "65c202d4aa62f32ffd1303cc", name: "Codewave" },
@@ -818,13 +818,13 @@ export const tasks = [
     subTasks: [
       {
         title: "Blog App Admin Dashboard",
-        date: "2024-02-08T00:00:00.000Z",
+        date: "2024-10-22T00:00:00.000Z",
         tag: "Website App",
         _id: "65c3535476ed5c48f9440973",
       },
     ],
-    createdAt: "2024-02-08T04:59:34.826Z",
-    updatedAt: "2024-02-09T06:51:15.005Z",
+    createdAt: "2024-10-22T04:59:34.826Z",
+    updatedAt: "2024-10-23T06:51:15.005Z",
     __v: 3,
   },
   {
@@ -920,13 +920,13 @@ export const tasks = [
       },
       {
         title: "Blog App Admin Dashboard",
-        date: "2024-02-07T00:00:00.000Z",
+        date: "2024-11-11T00:00:00.000Z",
         tag: "Design",
         _id: "65c3531476ed5c48f9440965",
       },
     ],
-    createdAt: "2024-02-07T17:56:39.969Z",
-    updatedAt: "2024-02-09T06:51:15.005Z",
+    createdAt: "2024-12-11T17:56:39.969Z",
+    updatedAt: "2024-11-11T06:51:15.005Z",
     __v: 1,
   },
   {
@@ -968,7 +968,7 @@ export const tasks = [
     _id: "65c3c21f55ae9b2f7666e86c",
     title: "Duplicate - Website Project Proposal",
     date: "2024-02-07T17:46:56.040Z",
-    priority: "Low",
+    priority: "low",
     stage: "completed",
     assets: [],
     team: [
