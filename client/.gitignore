@@ -12,8 +12,8 @@ lerna-debug.log*
 dist-ssr
 *.local
 .env
-/eslint.config.js
-/.gitignore
+eslint.config.js
+.gitignore
 
 # Editor directories and files
 .vscode/*
