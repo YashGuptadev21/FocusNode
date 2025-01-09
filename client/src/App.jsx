@@ -105,7 +105,9 @@ const App = () => {
       </Routes>
       <Toaster richColors />
     </main>
-  );
+
+);
 };
+console.log(import.meta.env.VITE_APP_BASE_URL);
 
 export default App;

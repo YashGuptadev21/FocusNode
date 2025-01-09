@@ -2,7 +2,7 @@ import React, { act, Fragment, useEffect, useState } from "react";
 import { Listbox, Transition } from "@headlessui/react";
 import { BsChevronExpand } from "react-icons/bs";
 import { MdCheck } from "react-icons/md";
-import { summary, user } from "../../assets/data";
+// import { summary, user } from "../../assets/data";
 import clsx from "clsx";
 import { getInitials } from "../../utils";
 import { useGetTeamListQuery } from "../../redux/slices/api/userApiSlice";
@@ -79,7 +79,7 @@ const UserList = ({ setTeam, team }) => {
                       </div>
                       {selected ? (
                         <span className="absolute inset-y-0 left-0 flex items-center pl-3 text-amber-600">
-                          4
+                          
                           <MdCheck className="h-5 w-5" aria-hidden="true" />
                         </span>
                       ) : null}

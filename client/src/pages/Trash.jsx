@@ -10,7 +10,6 @@ import Title from "../components/Title";
 import Button from "../components/Button";
 import { PRIORITYSTYLES, TASK_TYPE } from "../utils";
 import clsx from "clsx";
-import { summary, tasks } from "../assets/data";
 import ConfirmationDialog from "../components/Dialogs";
 import { useDeleteRestoreTaskMutation, useGetAllTaskQuery } from "../redux/slices/api/taskApiSlice";
 import { toast } from "sonner";

@@ -13,7 +13,7 @@ import {
 } from "react-icons/md";
 import { RxActivityLog } from "react-icons/rx";
 import { useParams } from "react-router-dom";
-import { tasks } from "../assets/data";
+// import { tasks } from "../assets/data";
 import Tabs from "../components/Tabs";
 import { PRIORITYSTYLES, TASK_TYPE, getInitials } from "../utils";
 import Loading from "../components/Loader";
