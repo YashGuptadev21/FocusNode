@@ -4,6 +4,7 @@ import { Dialog } from "@headlessui/react";
 import Textbox from "../Textbox";
 import Button from "../Button";
 import { useCreateSubTaskMutation } from "../../redux/slices/api/taskApiSlice";
+import { toast } from "sonner";
 
 const AddSubTask = ({ open, setOpen, id }) => {
   const {
@@ -79,8 +80,8 @@ const AddSubTask = ({ open, setOpen, id }) => {
             <Button
               type='submit'
               className='bg-blue-600 text-sm font-semibold text-white hover:bg-blue-700 sm:ml-3 sm:w-auto'
-              label='Add Task'
               // onClick={setOpen(true)}
+              label='Add Task'
             />
 
             <Button

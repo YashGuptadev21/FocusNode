@@ -13,7 +13,7 @@ export const dbConnection = async () => {
 
 export const createJWT = (res, userId) => {
   const token = jwt.sign({ userId }, process.env.JWT_SECRET, {
-    expiresIn: "1d",
+    expiresIn: "90d",
   });
 
   // Change sameSite from strict to none when you deploy your app
@@ -21,6 +21,6 @@ export const createJWT = (res, userId) => {
     httpOnly: true,
     secure: process.env.NODE_ENV !== "development",
     sameSite: "strict", //prevent CSRF attack
-    maxAge: 1 * 24 * 60 * 60 * 1000, //1 day
+    maxAge: 90 * 24 * 60 * 60 * 1000, //90 day
   });
 };
