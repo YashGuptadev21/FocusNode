@@ -87,9 +87,7 @@ const login = () => {
                 register={register("password",{required : "Password is required"})}
                 error={errors.password ? errors.password.message : ""}
               />
-              <span className="text-sm text-gray-500 hover:text-blue-600 hover-underline cursor-pointer">
-                Forgot Password?
-              </span>
+              <span></span>
               {isLoading ? (
                 <Loading />
               ) : (

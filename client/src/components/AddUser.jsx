@@ -27,6 +27,7 @@ const AddUser = ({ open, setOpen, userData }) => {
   const dispatch = useDispatch();
 
   const { data, refetch } = useGetTeamListQuery({});
+  console.log(data)
 
   const [addNewUser, { isLoading }] = useRegisterMutation();
   const [updateUser, { isLoading: isUpdating }] = useUpdateUserMutation();

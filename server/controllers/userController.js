@@ -2,6 +2,7 @@ import { response } from "express";
 import User from "../models/user.js";
 import { createJWT } from "../utils/index.js";
 import Notice from "../models/notification.js";
+import { z } from "zod";
 
 export const registerUser = async (req, res) => {
   try {
@@ -137,6 +138,7 @@ export const updateUserProfile = async (req, res) => {
 
     if (user) {
       user.name = req.body.name || user.name;
+      user.email = req.body.email || user.email
       user.title = req.body.title || user.title;
       user.role = req.body.role || user.role;
 
