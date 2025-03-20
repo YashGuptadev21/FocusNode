@@ -17,7 +17,7 @@ const app = express();
 
 app.use(
   cors({
-    origin: [ "https://gleeful-dasik-d87191.netlify.app"],
+    origin: [ "https://focusnode.netlify.app"],
     methods: ["GET", "POST", "DELETE", "PUT"],
     credentials: true,
   })
