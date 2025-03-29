@@ -21,5 +21,7 @@ export const createJWT = (res, userId) => {
     secure: true,
     sameSite: "None", //prevent CSRF attack
     maxAge: 90 * 24 * 60 * 60 * 1000, //90 day
+
   });
+  console.log("Cookie Set in Response" , res.getHeaders()["set-cookie"])
 };
