@@ -16,12 +16,13 @@ export const createJWT = (res, userId) => {
     expiresIn: "90d",
   });
 
+  console.log(token)
+
   // Change sameSite from strict to none when you deploy your app
   res.cookie("token", token, {
+    httpOnly: true,
     secure: true,
     sameSite: "None", //prevent CSRF attack
     maxAge: 90 * 24 * 60 * 60 * 1000, //90 day
-
   });
-  console.log("Cookie Set in Response" , res.getHeaders()["set-cookie"])
 };
