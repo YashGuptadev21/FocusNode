@@ -11,7 +11,7 @@ export const dbConnection = async () => {
   }
 };
 
-export const createJWT = (res, userId) => {
+export const createJWT = ( userId) => {
   const token = jwt.sign({ userId }, process.env.JWT_SECRET, {
     expiresIn: "90d",
   });
