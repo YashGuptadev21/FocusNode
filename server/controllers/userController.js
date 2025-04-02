@@ -83,17 +83,13 @@ export const loginUser = async (req, res) => {
 
 export const logoutUser = async (req, res) => {
   try {
-    res.cookie("token", "", {
-      htttpOnly: true,
-      expires: new Date(0),
-    });
-
-    res.status(200).json({ message: "Logout successful" });
+    res.status(200).json({ status: true, message: "Logout successful. Please remove the token from client storage." });
   } catch (error) {
-    console.log(error);
-    return res.status(400).json({ status: false, message: error.message });
+    console.error(error);
+    return res.status(500).json({ status: false, message: "Something went wrong. Try again." });
   }
 };
+
 
 export const getTeamList = async (req, res) => {
   try {

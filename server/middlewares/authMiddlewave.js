@@ -3,27 +3,26 @@ import User from "../models/user.js";
 
 const protectRoute = async (req, res, next) => {
   try {
-    // let token = req.cookies.token;
+    let token = req.headers.authorization;
 
-    let token = true
+    if (token && token.startsWith("Bearer ")) {
+      token = token.split("")[1]
+      const decodedToken = jwt.verify(token, process.env.JWT_SECRET);
 
-    if (token) {
-      // const decodedToken = jwt.verify(token, process.env.JWT_SECRET);
+      const resp = await User.findById(decodedToken.userId).select(
+        "isAdmin email"
+      );
 
-      // const resp = await User.findById(decodedToken.userId).select(
-      //   "isAdmin email"
-      // );
+      if (!resp) {
+        return res.status(401).json({ status: false, message: "User not found. Try login again." });
+      }
 
-      // if (!resp) {
-      //   return res.status(401).json({ status: false, message: "User not found. Try login again." });
-      // }
-
-      // req.user = {
-      //   email: resp.email,
-      //   isAdmin: resp.isAdmin,
-      //   userId: decodedToken.userId,
-      // };
-      // console.log(decodedToken)
+      req.user = {
+        email: resp.email,
+        isAdmin: resp.isAdmin,
+        userId: decodedToken.userId,
+      };
+      console.log(decodedToken)
       next();
     } else {
       return res
