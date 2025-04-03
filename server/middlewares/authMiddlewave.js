@@ -3,15 +3,15 @@ import User from "../models/user.js";
 
 const protectRoute = async (req, res, next) => {
   try {
-    let token = req.headers.authorization;
+    let token = req.cookies.token;
 
-    if (token && token.startsWith("Bearer ")) {
-      token = token.split(" ")[1]
+    if (token) {
       const decodedToken = jwt.verify(token, process.env.JWT_SECRET);
 
       const resp = await User.findById(decodedToken.userId).select(
         "isAdmin email"
       );
+      console.log("USer from DB:" , resp)
 
       if (!resp) {
         return res.status(401).json({ status: false, message: "User not found. Try login again." });
@@ -23,6 +23,8 @@ const protectRoute = async (req, res, next) => {
         userId: decodedToken.userId,
       };
       console.log(decodedToken)
+      console.log("Middleware Passed")
+      console.log("Recieved tokemn" ,req.cookie.token)
       next();
     } else {
       return res

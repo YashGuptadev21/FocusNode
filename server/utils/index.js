@@ -11,11 +11,15 @@ export const dbConnection = async () => {
   }
 };
 
-export const createJWT = ( userId) => {
+export const createJWT = (res, userId) => {
   const token = jwt.sign({ userId }, process.env.JWT_SECRET, {
-    expiresIn: "90d",
+    expiresIn: "1d",
   });
 
-  console.log(token)
-  return token;
+  res.cookie("token", token, {
+    httpOnly: true,
+    secure: process.env.NODE_ENV !== "development", // Use secure cookies in production
+    sameSite: "None", // Prevent CSRF attacks
+    maxAge: 90 * 24 * 60 * 60 * 1000, // 90 days
+  });
 };

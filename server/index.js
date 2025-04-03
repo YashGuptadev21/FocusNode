@@ -18,7 +18,7 @@ const app = express();
 app.use(
   cors( 
     { 
-    origin: [ "https://focusnode.netlify.app"],
+    origin: [ "https://focusnode.netlify.app","http://localhost:5173"],
     methods: ["GET", "POST", "DELETE", "PUT"],
     credentials: true,
   }
